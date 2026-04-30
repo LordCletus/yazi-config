@@ -1,0 +1,41 @@
+[mgr]
+ratio = [0, 4, 3]
+
+#Hardcode nvim as editor
+[opener]
+edit = [
+    { run = 'nvim "$@"',block=true, for="unix"}
+]
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open" },
+]
+exec = [
+    { run = 'exec "$@"', desc = "Exec"}
+]
+extract = [
+	{ run = 'ya pub extract --list "$@"', desc = "Extract here", for = "unix" },
+	{ run = 'ya pub extract --list %*',   desc = "Extract here", for = "windows" },
+]
+wine = [
+    { run = 'wine "$@"', desc = "Run with wine"}
+]
+[open]
+
+append_rules = [
+    #{ mime = "application/*", use = "exec"},
+    #{ mime = "text/shellscript", use = "exec"},
+    { mime = "application/microsoft.portable-executable", use = "wine"},
+    { mime = "application/pdf", use = "firefox"},
+    { url = "*", use = "xdg-open"}
+
+]
+#Fetcers for git.yazi
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"

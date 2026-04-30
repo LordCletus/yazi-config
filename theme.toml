@@ -1,0 +1,8 @@
+[flavor]
+dark = "rose-pine"    # or "rose-pine-moon"
+# or light = "rose-pine-dawn"
+
+[mgr]
+marker_marked = {fg = "#c4a7e7", bg = "#c4a7e7"}
+marker_selected = {fg = "#c4a7e7", bg = "#c4a7e7"}
+marker_cut = {fg = "#eb6f92", bg = "#eb6f92"}

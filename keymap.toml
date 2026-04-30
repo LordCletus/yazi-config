@@ -1,0 +1,163 @@
+#Trash file
+[[mgr.prepend_keymap]]
+on = [ "d", "d" ]
+run = "remove"
+desc = "Trash selected file"
+#Open diskonaut
+[[mgr.prepend_keymap]]
+on = [ "d", "u" ]
+run = "shell --block diskonaut"
+desc = "Launch diskonaut"
+#Symlink
+[[mgr.prepend_keymap]]
+on = [ "s", "l" ]
+run = "link --force"
+desc = "Symlink to currently yanked file"
+#Smart Enter
+[[mgr.prepend_keymap]]
+on   = "l"
+run  = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
+[[mgr.prepend_keymap]]
+on = "L"
+run = "open --interactive"
+desc = "Open with X"
+
+#Drop to shell
+[[mgr.prepend_keymap]]
+on   = "!"
+for  = "unix"
+run  = 'shell "$SHELL" --block'
+desc = "Open $SHELL here"
+
+#Start lazygit
+[[mgr.prepend_keymap]]
+on   = [ "g", "l" ]
+run  = "plugin lazygit"
+desc = "run lazygit"
+
+#New file
+[[mgr.prepend_keymap]]
+on = "o"
+run = "create"
+desc = "Create new file (touch)"
+
+[[mgr.prepend_keymap]]
+on = "O"
+run = "create --dir"
+desc = "Create new dir (mkdir)"
+
+#Make esc work gooder
+[[input.prepend_keymap]]
+on   = "<Esc>"
+run  = "close"
+desc = "Cancel input"
+
+#Chmod command
+[[mgr.prepend_keymap]]
+on   = [ "c", "m" ]
+run  = "plugin chmod"
+desc = "Chmod on selected files"
+
+#Bunny bookmarks
+[[mgr.prepend_keymap]]
+desc = "Start bunny.yazi"
+on = "b"
+run = "plugin bunny"
+
+# Optionally, add another keymap to immediately fuzzy search bookmarks
+[[mgr.prepend_keymap]]
+desc = "Start bunny.yazi fuzzy search"
+on = "B"
+run = "plugin bunny fuzzy"
+
+##################
+#Relative Motions#
+##################
+[[mgr.prepend_keymap]]
+on = [ "1" ]
+run = "plugin relative-motions 1"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "2" ]
+run = "plugin relative-motions 2"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "3" ]
+run = "plugin relative-motions 3"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "4" ]
+run = "plugin relative-motions 4"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "5" ]
+run = "plugin relative-motions 5"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "6" ]
+run = "plugin relative-motions 6"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "7" ]
+run = "plugin relative-motions 7"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "8" ]
+run = "plugin relative-motions 8"
+desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "9" ]
+run = "plugin relative-motions 9"
+desc = "Move in relative steps"
+
+############################
+#Projects (mostly for nvim)#
+############################
+[[mgr.prepend_keymap]]
+on = [ "P", "s" ]
+run = "plugin projects save"
+desc = "Save current project"
+
+[[mgr.prepend_keymap]]
+on = [ "P", "l" ]
+run = "plugin projects load"
+desc = "Load project"
+
+[[mgr.prepend_keymap]]
+on = [ "P", "P" ]
+run = "plugin projects load_last"
+desc = "Load last project"
+
+[[mgr.prepend_keymap]]
+on = [ "P", "d" ]
+run = "plugin projects delete"
+desc = "Delete project"
+
+[[mgr.prepend_keymap]]
+on = [ "P", "D" ]
+run = "plugin projects delete_all"
+desc = "Delete all projects"
+
+[[mgr.prepend_keymap]]
+on = [ "P", "m" ]
+run = "plugin projects 'merge current'"
+desc = "Merge current tab to other projects"
+
+[[mgr.prepend_keymap]]
+on = [ "P", "M" ]
+run = "plugin projects 'merge all'"
+desc = "Merge current project to other projects"
+
+#[[mgr.prepend_keymap]]
+#on = [ "q" ]
+#run = "plugin projects quit"
+#desc = "Save last project and exit the process"
