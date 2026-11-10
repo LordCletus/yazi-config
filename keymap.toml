@@ -1,3 +1,10 @@
+[[mgr.prepend_keymap]]
+on = "<C-p>"
+run = "paste --force"
+#Drag and drop
+[[mgr.prepend_keymap]]
+on  = "<C-n>"
+run = "shell -- dragon -x -i -T %h"
 #Trash file
 [[mgr.prepend_keymap]]
 on = [ "d", "d" ]
@@ -161,3 +168,7 @@ desc = "Merge current project to other projects"
 #on = [ "q" ]
 #run = "plugin projects quit"
 #desc = "Save last project and exit the process"
+[[mgr.prepend_keymap]]
+on   = [ "<C-d>" ]
+run  = "plugin drag"
+desc = "Drag Files"
